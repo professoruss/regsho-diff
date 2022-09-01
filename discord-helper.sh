@@ -5,7 +5,7 @@ scriptdir=$(dirname "$(readlink -f "$BASH_SOURCE")")
 source ${scriptdir}/vars
 
 # run regsho script, replace tabs with spaces so json doesn't freak out later
-bash ${scriptdir)/regsho.sh |expand -t 4 >> ${scriptdir}/regsho.tmp
+bash ${scriptdir}/regsho.sh |expand -t 4 >> ${scriptdir}/regsho.tmp
 
 # add json header to file we will use with curl
 echo -n '{ "content": "```' > ${scriptdir}/regsho2.tmp
